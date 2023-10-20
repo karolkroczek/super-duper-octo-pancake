@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+
+:root{
+  font-family: 'Outfit', sans-serif;
+  --Softblue: hsl(215, 51%, 70%);
+  --Cyan: hsl(178, 100%, 50%);
+  --CyanHSLA: hsla(178,100%,50%,0.50);
+
+  --blueMainBG: hsl(217, 54%, 11%);
+  --blueCardBG: hsl(216, 50%, 16%);
+  --blueLine: hsl(215, 32%, 27%);
+  --White: hsl(0, 0%, 100%);
+
+  font-size: 18px;
+  font-weight: 400;
+  margin: 0;
+}
+
+body{
+  background-color: var(--blueMainBG);
+  color: var(--Softblue);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.card{
+  background-color: var(--blueCardBG);
+  border-radius: 15px;
+  padding: 1em;
+  width: 80%;
+  height: auto;
+  max-width: 350px;
+  margin-top: auto;
+}
+
+.card-img{
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.card-img-container{
+  position: relative;
+}
+
+.card-img-container:hover::before{
+  content: '';
+  background-image: url("./images/icon-view.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 15px;
+  background-color: var(--CyanHSLA);
+  cursor: pointer;
+  color: var(--White);
+  position: absolute;
+  width: 100%;
+  height: 99%;
+  text-align: center;
+}
+
+.card-desc{
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  margin-top: 1em;
+}
+
+.card-desc-title{
+  color: var(--White);
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.card-desc-title:hover{
+  color: var(--Cyan);
+  cursor: pointer;
+}
+
+.card-desc-subtext{
+  font-weight: 300;
+}
+
+.card-desc-price-container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+.card-desc-price-text{
+  color: var(--Cyan);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card-desc-time{
+  display: flex;
+  align-items: center;
+  gap: 5px  ;
+}
+
+hr{
+  display: inline;
+  width: 100%;
+  color: var(--blueLine)  ;
+}
+
+.card-desc-avatar-container{
+  display: flex;
+  align-items: center;
+  gap: 1em;
+} 
+
+.card-desc-avatar-container div p {
+  color: var(--White);
+  display: inline-block;
+  cursor: pointer;
+}
+
+.card-desc-avatar-container div p:hover {
+  color: var(--Cyan);
+  display: inline-block;
+}
+
+.card-desc-avatar-img{
+  width: 32px;
+  height: auto;
+  border: 1px var(--White) solid;
+  border-radius: 25px;
+}
+
+.attribution { 
+  margin-top: auto;
+  font-size: 11px; 
+  text-align: center;
+}
+
+.attribution a { 
+  color: hsl(228, 45%, 44%);
+ }
+
+@media screen and (min-width:375px) {
+  
+}
